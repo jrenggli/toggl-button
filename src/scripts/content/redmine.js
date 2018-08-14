@@ -2,9 +2,9 @@
 /*global $: false, document: false, togglbutton: false*/
 'use strict';
 
-togglbutton.render('body.controller-issues.action-show h2:not(.toggl)', {}, function (elem) {
+togglbutton.render('body.controller-issues.action-show #content h2:not(.toggl)', {}, function (elem) {
   var link, description,
-    numElem = $('h2'),
+    numElem = $('#content h2'),
     titleElem = $('.subject h3') || "",
     projectElem = $('h1');
 
@@ -29,5 +29,5 @@ togglbutton.render('body.controller-issues.action-show h2:not(.toggl)', {}, func
     projectName: projectElem && projectElem.textContent
   });
 
-  $('h2').appendChild(link);
+  $('#content h2').appendChild(link);
 });
